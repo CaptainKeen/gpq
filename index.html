@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+
+    <title>GPQ Solver</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="row py-2">
+                <div id="guess" class="col text-center">
+                    Guess #1
+                </div>
+            </div>
+            <div class="row py-2">
+                <div class="col text-center">
+                    <img id="i0">
+                    <div id="l0">Drink</div>
+                </div>
+                <div class="col text-center">
+                    <img id="i1">
+                    <div id="l1">Scroll</div>
+                </div>
+                <div class="col text-center">
+                    <img id="i2">
+                    <div id="l2">Scroll</div>
+                </div>
+                <div class="col text-center">
+                    <img id="i3">
+                    <div id="l3">Medal</div>
+                </div>
+            </div>
+
+            <div class="row py-2">
+                <div class="col text-center">
+                    Correct:
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-outline-light">
+                            <input type="radio" name="correct" value="0">
+                            0
+                        </label>
+                        <label class="btn btn-outline-light">
+                            <input type="radio" name="correct" value="1">
+                            1
+                        </label>
+                        <label class="btn btn-outline-light">
+                            <input type="radio" name="correct" value="2">
+                            2
+                        </label>
+                        <label class="btn btn-outline-light">
+                            <input type="radio" name="correct" value="3">
+                            3
+                        </label>
+                        <label class="btn btn-outline-light">
+                            <input type="radio" name="correct" value="4">
+                            4
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row py-2">
+                <div class="col text-center">
+                    Incorrect:
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-outline-light">
+                            <input type="radio" name="incorrect" value="0">
+                            0
+                        </label>
+                        <label class="btn btn-outline-light">
+                            <input type="radio" name="incorrect" value="1">
+                            1
+                        </label>
+                        <label class="btn btn-outline-light">
+                            <input type="radio" name="incorrect" value="2">
+                            2
+                        </label>
+                        <label class="btn btn-outline-light">
+                            <input type="radio" name="incorrect" value="3">
+                            3
+                        </label>
+                        <label class="btn btn-outline-light">
+                            <input type="radio" name="incorrect" value="4">
+                            4
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row py-3">
+                <div class="col text-center">
+                    <button id="reset" onclick="reset()" class="btn btn-danger">Restart</button>
+                </div>
+                <div class="col text-center">
+                    <button id="submit" onclick="submit()" class="btn btn-success">Submit</button>
+                </div>
+                <div class="col text-center">
+                    <button id="undo" onclick="undo()" class="btn btn-warning">Undo</button>
+                </div>
+            </div>
+
+            <div class="row py-1">
+                <div id="h0l" class="col text-right">
+                </div>
+                <div id="h0r" class="col text-left">
+                </div>
+            </div>
+
+            <div class="row py-1">
+                <div id="h1l" class="col text-right">
+                </div>
+                <div id="h1r" class="col text-left">
+                </div>
+            </div>
+
+            <div class="row py-1">
+                <div id="h2l" class="col text-right">
+                </div>
+                <div id="h2r" class="col text-left">
+                </div>
+            </div>
+
+            <div class="row py-1">
+                <div id="h3l" class="col text-right">
+                </div>
+                <div id="h3r" class="col text-left">
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./index.js"></script>
+</body>
+
+</html>

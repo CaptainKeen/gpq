@@ -10,16 +10,6 @@ const guessLabel = document.getElementById('guess');
 
 const numberToItem = { 0: 'Scroll', 1: 'Medal', 2: 'Drink', 3: 'Food' };
 
-async function preload() {
-
-    await Promise.all(Object.values(numberToItem).map(item => {
-        const img = new Image();
-        img.src = `images/${item}.gif`;
-        return img.decode();
-    }));
-
-}
-
 function reset(history = true) {
 
     states.length = 0;
@@ -42,7 +32,7 @@ function updateGuess() {
         const item = numberToItem[guess[i]];
 
         const img = document.getElementById(`i${i}`);
-        img.src = `images/${item}.gif`;
+        img.className = item;
 
         const label = document.getElementById(`l${i}`);
         label.innerText = item;
@@ -76,7 +66,7 @@ function submit() {
     const incorrect = radioValue('incorrect');
 
     const key = `${correct}${incorrect}`;
-    const historyLeft = currentState.g.split('').map(n => `<img src="images/${numberToItem[n]}.gif">`).join('');
+    const historyLeft = currentState.g.split('').map(n => `<img class="${numberToItem[n]}">`).join('');
     let historyRight = '';
 
     if (key === '40') {
@@ -115,4 +105,4 @@ function undo() {
 
 }
 
-preload().then(() => reset());
+reset();

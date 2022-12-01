@@ -6,3 +6,19 @@ body {
 #guess {
     text-decoration: underline;
 }
+
+.Scroll {
+    content: url('images/Scroll.gif');
+}
+
+.Medal {
+    content: url('images/Medal.gif');
+}
+
+.Drink {
+    content: url('images/Drink.gif');
+}
+
+.Food {
+    content: url('images/Food.gif');
+}

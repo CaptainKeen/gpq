@@ -3,10 +3,6 @@ body {
     color: #fff;
 }
 
-#guess {
-    text-decoration: underline;
-}
-
 .Scroll {
     content: url('images/Scroll.gif');
 }
